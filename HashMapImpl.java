@@ -166,7 +166,7 @@ public class HashMapImpl<K, V> {
     }
 
     public static void main(String[] args) {
-        HashMapImpl<String, String> hashMap = new HashMapImpl<String, String>();
+       HashMapImpl<String, String> hashMap = new HashMapImpl<String, String>();
         Entry<String, String> entrydata = new Entry<>();
         hashMap.put("name","Rekayasa Perangkat Lunak");
         hashMap.put("url", "https://se.ittelkom-pwt.ac.id");
@@ -176,6 +176,27 @@ public class HashMapImpl<K, V> {
         System.out.println("URL \t: "+hashMap.get("url"));
         System.out.println("Email \t: "+hashMap.get("email"));
 
-        System.out.println(entrydata.equals(hashMap));
+        System.out.println();
+        HashMapImpl<Integer, String> hashMap2 = new HashMapImpl<Integer, String>();
+        hashMap2.put(10, "Apel");
+        hashMap2.put(1, "Jeruk");
+        hashMap2.put(79, "Anggur");
+        System.out.println("Nilai pada 10 "+hashMap2.get(10));
+        System.out.println("Nilai pada 1 "+hashMap2.get(1));
+        System.out.println("Nilai pada 79 " + hashMap2.get(79));
+        System.out.println("Nilai pada 3 " + hashMap2.get(3));
+/*
+        hashMap2.remove(1);
+        System.out.println("Nilai pada 1 " + hashMap2.get(1));
+        System.out.println("Nilai pada 79 " + hashMap2.get(79));
+ */
+//        System.out.println("Val at 10 " + hashMap.get(10));
+//        System.out.println("Val at 2 " + hashMap.get(2));
+        System.out.println();
+        hashMap2.put(null, "Pear");
+        System.out.println("Val at null " + hashMap2.get(null));
+        System.out.println("Hashmap has key at null:" + hashMap2.containsKey(null));
+        System.out.println("Hashmap has value at null:" + hashMap2.containsValue("Pear"));
+        System.out.println("Size of Map:" + hashMap2.size());
     }
 }
